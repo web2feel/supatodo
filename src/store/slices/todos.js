@@ -14,7 +14,10 @@ export const fetchTodos = createAsyncThunk(
   "Todo/fetchTodos",
   async (_, thunkAPI) => {
     try {
-      let { data: Todos, error } = await supabase.from("Todos").select("*");
+      let { data: Todos, error } = await supabase
+        .from("Todos")
+        .select("*")
+        .order("id", { ascending: true });
       if (error) {
         throw Error(error);
       }

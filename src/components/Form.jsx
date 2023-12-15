@@ -12,9 +12,9 @@ const Form = () => {
   };
 
   return (
-    <div className="flex gap-3 justify-between">
+    <div className="flex flex-col sm:flex-row gap-3 justify-between">
       <input
-        placeholder="Add an item"
+        placeholder="Add todo item..."
         type="text"
         className="p-4 rounded border-2 border-neutral-700 bg-transparent flex-1"
         value={todoItem}
