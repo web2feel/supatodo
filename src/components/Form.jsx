@@ -7,6 +7,7 @@ const Form = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
+    if(todoItem.trim() === "") return
     dispatch(createTodo([{ title: todoItem, done: false }]));
     setTodo("");
   };
